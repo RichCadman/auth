@@ -1,0 +1,139 @@
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> 菜单栏</a>
+    <ul>
+        <li class="{$current=='index'?'active':''}"><a href="__APP__/Index/index.html"><i class="icon icon-dashboard"></i> <span>仪表盘</span></a> </li>
+        <foreach name="menu" item="v">
+            <!--判断是否有权限显示-->
+            <if condition="in_array($v['id'],$menu_array)">
+                <li class="submenu {$current=='item'?'active':''}">
+                    <if condition="$v['p_id'] == 0">
+                        <a href="#"><i class="icon {$v.icon}"></i> <span>{$v.title}</span></a>
+                        <ul style="display:{$display == $v['controller'] ? 'block' : 'none'}">
+                            <foreach name="menu" item="vv">
+                                <if condition="$vv['p_id'] == $v['id']">
+                                    <!--判断是否有权限显示-->
+                                    <if condition="in_array($vv['id'],$rule_array)">
+                                        <li class="{$current == $vv['function'] ? 'active' : ''}"><a href="__APP__/{$vv.controller}/{$vv.function}.html">{$vv.title}</a></li>
+                                    </if>
+                                    <!--判断是否有权限显示-->
+                                </if>
+                            </foreach>
+                        </ul>
+                    </if>
+                </li>
+            </if>
+            <!--判断是否有权限显示-->
+        </foreach>
+            <!--<li class="{$current=='my_item'?'active':''}"> <a href="__APP__/Item/my_item.html"><i class="icon icon-list"></i> <span>我的项目</span></a> </li>-->
+            <!--<li class="{$current=='add_remark'?'active':''}"> <a href="__APP__/Remark/add_remark.html"><i class="icon icon-paste"></i> <span>添加修改记录</span></a> </li>-->
+            <!--<li class="{$current=='upload_img'?'active':''}"> <a href="__APP__/Index/upload_img.html"><i class="icon icon-picture"></i> <span>上传效果图</span></a> </li>-->
+            <!--<li class="submenu {$current=='item'?'active':''}"> <a href="#"><i class="icon icon-th-list"></i> <span>项目管理</span> &lt;!&ndash; <span class="label label-important">2</span> &ndash;&gt;</a>-->
+                <!--<ul style="display:{$display=='item'?'block':'none'}">-->
+                    <!--<li class="{$current=='item_index'?'active':''}"><a href="__APP__/Item/item_index.html">项目总览</a></li>-->
+                    <!--<li class="{$current=='item_add'?'active':''}"><a href="__APP__/Item/item_add.html">添加项目</a></li>-->
+                    <!--<li class="{$current=='item_link'?'active':''}"><a href="__APP__/Item/item_link.html">项目关联客户</a></li>-->
+                    <!--<li class="{$current=='item_add_time'?'active':''}"><a href="__APP__/Item/item_add_time.html">增加项目时间</a></li>-->
+                    <!--<li class="{$current=='item_affirm'?'active':''}"><a href="__APP__/Item/item_affirm.html">待确认项目</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="submenu {$current=='users'?'active':''}"> <a href="#"><i class="icon  icon-group"></i> <span>员工管理</span> &lt;!&ndash; <span class="label label-important">2</span> &ndash;&gt;</a>-->
+                <!--<ul style="display:{$display=='user'?'block':'none'}">-->
+                    <!--<li class="{$current=='user_index'?'active':''}"><a href="__APP__/User/user_index.html">员工总览</a></li>-->
+                    <!--<li class="{$current=='add_user'?'active':''}"><a href="__APP__/User/add_user.html">添加员工</a></li>-->
+                    <!--<li class="{$current=='users_recycle'?'active':''}"><a href="__APP__/Users/users_recycle.html">回收站</a></li>-->
+                    <!--&lt;!&ndash; <li><a href="__APP__/Index/form_wizard.html">Form with Wizard</a></li> &ndash;&gt;-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="submenu {$current=='remark'?'active':''}"> <a href="#"><i class="icon  icon-comments-alt"></i> <span>推送消息</span> &lt;!&ndash; <span class="label label-important">2</span> &ndash;&gt;</a>-->
+                <!--<ul style="display:{$display=='remark'?'block':'none'}">-->
+                    <!--<li class="{$current=='remark_web'?'active':''}"><a href="__APP__/Remark/remark_web.html">上传项目</a></li>-->
+                    <!--<li class="{$current=='remark_money'?'active':''}"><a href="__APP__/Remark/remark_money.html">推送项目完结消息</a></li>-->
+                    <!--<li class="{$current=='remark_web_push'?'active':''}"><a href="__APP__/Remark/remark_web_push.html">推送项目至客户</a></li>-->
+                    <!--<li class="{$current=='wait_affirm'?'active':''}"><a href="__APP__/Remark/wait_affirm.html">待客户确认消息</a></li>-->
+                    <!--&lt;!&ndash; <li><a href="__APP__/Index/form_wizard.html">Form with Wizard</a></li> &ndash;&gt;-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="submenu {$current=='work'?'active':''}"> <a href="#"><i class="icon   icon-calendar"></i> <span>考勤管理</span> &lt;!&ndash; <span class="label label-important">2</span> &ndash;&gt;</a>-->
+                <!--<ul style="display:{$display=='work'?'block':'none'}">-->
+                    <!--<li class="{$current=='index'?'active':''}"><a href="__APP__/Wwork_index.htmlhtml">假条总览</a></li>-->
+                    <!--<li class="{$current=='upload'?'active':''}"><a href="__APP__/Work/upload.html">上传考勤</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!-- <li class="submenu {$current=='position'?'active':''}"> <a href="#"><i class="icon icon-th-list"></i> <span>职位管理</span> <span class="label label-important">3</span></a>
+              <ul>
+               <li class="{$current=='position_index'?'active':''}"><a href="__APP__/Index/position_index.html">职位总览</a></li>
+                <li class="{$current=='position_add'?'active':''}"><a href="__APP__/Index/position_add.html">添加职位</a></li>
+                <li><a href="__APP__/Index/form_wizard.html">Form with Wizard</a></li>
+              </ul>
+            </li> -->
+            <!--<li class="submenu {$current=='auth'?'active':''}"> <a href="#"><i class="icon icon-th-list"></i> <span>权限管理</span> <span class="label label-important">3</span></a>-->
+              <!--<ul style="display:{$display=='auth'?'block':'none'}">-->
+               <!--<li class="{$current=='auth_index'?'active':''}"><a href="__APP__/Index/auth_index.html">权限总览</a></li>-->
+                <!--<li class="{$current=='add_rule'?'active':''}"><a href="__APP__/Auth/add_rule.html">添加规则</a></li>-->
+                  <!--<li class="{$current=='add_group'?'active':''}"><a href="__APP__/Auth/add_group.html">添加用户组</a></li>-->
+                  <!--<li class="{$current=='group_index'?'active':''}"><a href="__APP__/Auth/group_index.html">管理用户组</a></li>-->
+                <!--<li><a href="__APP__/Index/form_wizard.html">Form with Wizard</a></li>-->
+              <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="{$current=='item_ratio'?'active':''}"> <a href="__APP__/Item/item_ratio.html"><i class="icon  icon-thumbs-up"></i> <span>员工项目占比</span></a> </li>-->
+            <!--<li class="{$current=='log'?'active':''}"> <a href="__APP__/Log/log.html"><i class="icon icon-time"></i> <span>日志总览</span></a> </li>-->
+            <!--<li class="{$current=='performance'?'active':''}"> <a href="__APP__/Performance/performance.html"><i class="icon icon-bar-chart"></i> <span>绩效总览</span></a> </li>-->
+            <!--<li class="{$current=='my'?'active':''}"> <a href="__APP__/My/my.html"><i class="icon icon-user"></i> <span>个人中心</span></a> </li>-->
+            <!--<li class="{$current=='leave'?'active':''}"> <a href="__APP__/My/leave.html"><i class="icon icon-edit"></i> <span>请假条</span></a> </li>-->
+            <!--<li class="{$current=='download'?'active':''}"> <a href="__APP__/Work/download.html"><i class="icon icon-user"></i> <span>下载考勤</span></a> </li>-->
+            <!--<li class="{$current=='password'?'active':''}"> <a href="__APP__/My/password.html"><i class="icon  icon-pencil"></i> <span>修改密码</span></a> </li>-->
+
+        <!--  <li><a href="__APP__/Index/table.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
+
+        <li><a href="__APP__/Index/full.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
+
+        <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
+          <ul>
+           <li><a href="__APP__/Index/form_common.html">Basic Form</a></li>
+            <li><a href="__APP__/Index/form_validation.html">Form with Validation</a></li>
+            <li><a href="__APP__/Index/form_wizard.html">Form with Wizard</a></li>
+          </ul>
+        </li>
+
+        <li><a href="__APP__/Index/buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
+
+        <li><a href="__APP__/Index/interface1.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
+
+        <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
+          <ul>
+            <li><a href="__APP__/Index/index2.html">Dashboard2</a></li>
+            <li><a href="__APP__/Index/gallery.html">Gallery</a></li>
+            <li><a href="__APP__/Index/calendar.html">Calendar</a></li>
+            <li><a href="__APP__/Index/invoice.html">Invoice</a></li>
+            <li><a href="__APP__/Index/chat.html">Chat option</a></li>
+          </ul>
+
+        </li>
+
+        <li class="submenu"> <a href="#"><i class="icon icon-info-sign"></i> <span>Error</span> <span class="label label-important">4</span></a>
+          <ul>
+            <li><a href="__APP__/Index/error403.html">Error 403</a></li>
+            <li><a href="__APP__/Index/error404.html">Error 404</a></li>
+            <li><a href="__APP__/Index/error405.html">Error 405</a></li>
+            <li><a href="__APP__/Index/error500.html">Error 500</a></li>
+          </ul>
+        </li>
+
+        <li class="content"> <span>Monthly Bandwidth Transfer</span>
+          <div class="progress progress-mini progress-danger active progress-striped">
+            <div style="width: 77%;" class="bar"></div>
+          </div>
+          <span class="percent">77%</span>
+          <div class="stat">21419.94 / 14000 MB</div>
+        </li>
+
+        <li class="content"> <span>Disk Space Usage</span>
+          <div class="progress progress-mini active progress-striped">
+            <div style="width: 87%;" class="bar"></div>
+          </div>
+          <span class="percent">87%</span>
+          <div class="stat">604.44 / 4000 MB</div>
+        </li> -->
+
+    </ul>
+</div>

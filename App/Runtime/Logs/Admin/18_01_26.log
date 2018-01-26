@@ -1,0 +1,797 @@
+[ 2018-01-26T11:58:30+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: userinfo E:\www\auth\App\Admin\Controller\BaseController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0380s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `auth_group_access` WHERE ( uid =  ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `auth_group_access` WHERE ( uid =  ) LIMIT 1  
+
+[ 2018-01-26T11:58:31+08:00 ] 127.0.0.1 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2018-01-26T11:58:37+08:00 ] 127.0.0.1 /admin.php/Login/login_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `auth_admin` WHERE ( username = 'admin' and password = '202cb962ac59075b964b07152d234b70' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-01-26T11:58:38+08:00 ] 127.0.0.1 /admin.php/User/user_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_admin`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\ffcd5f631f1597dffa9962c1cf535751.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-26T11:58:42+08:00 ] 127.0.0.1 /admin.php/Users/users_editor/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Users
+
+[ 2018-01-26T11:58:45+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_group`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 102 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 150 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 152 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 154 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 152 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 154 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 152 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 154 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 152 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 154 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 156 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 161 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 162 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 163 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 164 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 165 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 166 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 167 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 168 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 169 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 170 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 173 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 174 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 175 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 176 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 177 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 181 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 182 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 183 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 184 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 185 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 186 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 190 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 191 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 192 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 193 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 196 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 198 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 199 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 203 行.
+NOTIC: [8] Undefined variable: display E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 204 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 205 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 206 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 207 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 208 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 212 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 213 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 214 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 215 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 216 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 217 行.
+NOTIC: [8] Undefined variable: current E:\www\auth\App\Runtime\Cache\Admin\664ce7c03dd1bb3b4fb103b7ee81cc9e.php 第 218 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/kindeditor.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/lang/zh_CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0130s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/themes/default/default.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/plugins/code/prettify.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0090s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/plugins/code/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/lang/zh_CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:46+08:00 ] 127.0.0.1 /admin.php/Auth/editor_user_auth/id/__KIND__/plugins/code/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_admin` [ RunTime:0.0090s ]
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+ERR: 1054:Unknown column '__KIND__' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `auth_admin` WHERE ( id = __KIND__ ) LIMIT 1  
+
+[ 2018-01-26T11:58:50+08:00 ] 127.0.0.1 /admin.php/Auth/rule_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\681b2279fbeb0fdadc80374fa16847b8.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/add_rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\70f9682038be2acdedde8a28ce16792a.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/themes/default/default.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/lang/zh_CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/kindeditor.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/plugins/code/prettify.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/plugins/code/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/lang/zh_CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:51+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/plugins/code/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:52+08:00 ] 127.0.0.1 /admin.php/Auth/add_group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `auth_rule`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\35cd6feae4b4a51f910b48eb854c7325.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:58:53+08:00 ] 127.0.0.1 /admin.php/Auth/group_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_group`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\b117d76d88f4cf2bd6423f8e40e6d18d.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-01-26T11:58:54+08:00 ] 127.0.0.1 /admin.php/Auth/add_rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\70f9682038be2acdedde8a28ce16792a.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:58:54+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/plugins/code/prettify.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:54+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/kindeditor.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:54+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/themes/default/default.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:54+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/lang/zh_CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:58:55+08:00 ] 127.0.0.1 /admin.php/Auth/__KIND__/plugins/code/prettify.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:__KIND__
+
+[ 2018-01-26T11:59:05+08:00 ] 127.0.0.1 /admin.php/Auth/group_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_group`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\b117d76d88f4cf2bd6423f8e40e6d18d.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:59:06+08:00 ] 127.0.0.1 /admin.php/Auth/add_group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM auth_group_access a INNER JOIN auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `auth_rule` WHERE `id` IN ('2','3','5','6','7','8','9','10','12','13','14','15','22','23','24','25','17','18','19','20') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `auth_rule`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(App/Admin/View/Public/foot.html): failed to open stream: No such file or directory E:\www\auth\Lib\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: position_id E:\www\auth\App\Runtime\Cache\Admin\35cd6feae4b4a51f910b48eb854c7325.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T11:59:17+08:00 ] 127.0.0.1 /admin.php/Item/remind
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:remind
+
+[ 2018-01-26T11:59:17+08:00 ] 127.0.0.1 /admin.php/Remark/auto_hit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Remark
+
+[ 2018-01-26T11:59:27+08:00 ] 127.0.0.1 /admin.php/Remark/auto_hit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Remark
+
+[ 2018-01-26T11:59:27+08:00 ] 127.0.0.1 /admin.php/Item/remind
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( is_visible = 1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group_access` WHERE ( uid = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_group` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:remind
+

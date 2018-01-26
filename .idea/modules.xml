@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../admin_dingzhi2/.idea/admin_dingzhi2.iml" filepath="$PROJECT_DIR$/../admin_dingzhi2/.idea/admin_dingzhi2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/auth.iml" filepath="$PROJECT_DIR$/.idea/auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cc/.idea/cc.iml" filepath="$PROJECT_DIR$/../cc/.idea/cc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gupiaoguanwang/.idea/detaiguanwang.iml" filepath="$PROJECT_DIR$/../gupiaoguanwang/.idea/detaiguanwang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gupiaoshoujizhan/.idea/gupiaoshoujizhan.iml" filepath="$PROJECT_DIR$/../gupiaoshoujizhan/.idea/gupiaoshoujizhan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../manage/.idea/manage.iml" filepath="$PROJECT_DIR$/../manage/.idea/manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zy/.idea/zy.iml" filepath="$PROJECT_DIR$/../zy/.idea/zy.iml" />
+    </modules>
+  </component>
+</project>
